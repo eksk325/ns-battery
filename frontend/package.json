@@ -1,7 +1,7 @@
 {
   "homepage": "http://mseo447.github.io/ns-battery",
   "proxy": "http://localhost:3001",
-  "name": "northshore-battery",
+  "name": "ns-battery",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

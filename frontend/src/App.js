@@ -7,7 +7,7 @@ import ContactUs from "./routes/ContactUs";
 import Quote from "./routes/Quote";
 import Login from "./routes/Login";
 import Admin from "./routes/Admin";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
