@@ -14,13 +14,13 @@ function Footer() {
         <div className={styles.footer}>
           <div className={styles.information}>
             <div className={styles.address}>
-              <i class="fa-solid fa-location-dot fa-2x"></i>
+              <i className="fa-solid fa-location-dot fa-2x"></i>
               <label>
                 8A Parity Place<br></br>Hillcrest<br></br>Auckland
               </label>
             </div>
             <div className={styles.email}>
-              <i class="fa-solid fa-envelope fa-2x"></i>
+              <i className="fa-solid fa-envelope fa-2x"></i>
               <label>raehane@gmail.com</label>
             </div>
           </div>

@@ -9,7 +9,7 @@ body {
 
 .intro {
   display: flex;
-  padding: 60px;
+  padding: 80px;
   justify-content: center;
 }
 
@@ -48,16 +48,17 @@ h3 {
 .enquiryForm {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .enquiryForm input {
   margin: 10px;
-  padding: 13px 27px;
+  padding: 13px 0px;
   text-align: center;
   display: flex;
   border: 1.5px solid;
   font-size: 15px;
-  width: 15rem;
+  width: 240px;
   border-radius: 12px;
 }
 
@@ -66,7 +67,7 @@ h3 {
   font-family: "Fira Sans", sans-serif;
   border-radius: 30px;
   padding: 18px 28px;
-  margin: 40px;
+  margin: 50px 0;
   font-size: 18px;
   background-color: #26327a;
   color: white;
@@ -96,46 +97,10 @@ h3 {
   margin-right: 10px;
 }
 
-.formRight input {
-  margin: 10px;
-  padding: 13px 27px;
-  text-align: center;
-  display: flex;
-  border: 1.5px solid;
-  font-size: 15px;
-  width: 200px;
-}
-
 .enquiryContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.instruction {
-  font-size: 15px !important;
-  padding-top: 5px !important;
-}
-
-.uploadImages {
-  visibility: hidden;
-}
-
-.uploadBox {
-  margin: 20px 20px;
-  border: 1.5px solid black;
-  border-radius: 12px;
-  width: 30rem;
-}
-
-.uploadBox label {
-  font-size: 2rem;
-  padding: 20px 20px;
-}
-
-.uploadBox label:hover {
-  text-decoration: underline;
-  cursor: pointer;
 }
 
 @media screen and (max-width: 1000px) {

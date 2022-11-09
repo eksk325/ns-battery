@@ -1,5 +1,6 @@
 import styles from "../styles/Home.module.css";
-import logo from "../images/century.jpg";
+
+import ImageUpload from "./ImageUpload";
 
 function EnquiryForm() {
   return (
@@ -54,7 +55,6 @@ function EnquiryForm() {
             required
           ></input>
         </div>
-
         <div className={styles.battery}>
           <label>Battery Dimensions</label>
           <input
@@ -79,25 +79,10 @@ function EnquiryForm() {
             required
           ></input>
         </div>
-
         <div className={styles.batteryImages}>
-          <label>Battery Images</label>
-          <label className={styles.instruction}>
-            Attach 2-3 photos of your current car battery
-          </label>
-          <div className={styles.uploadBox}>
-            <label for="batteryImages">
-              <i class="fa-solid fa-arrow-up-from-bracket"></i>
-            </label>
-          </div>
-          <input
-            accept="image/*"
-            id="batteryImages"
-            className={styles.uploadImages}
-            type="file"
-            capture="environment"
-            multiple="true"
-          />
+          <label>Battery Image</label>
+
+          <ImageUpload />
         </div>
       </form>
 
