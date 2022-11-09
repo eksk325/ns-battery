@@ -55,24 +55,28 @@ function EnquiryForm() {
             required
           ></input>
         </div>
+        <div className={styles.idle}>
+          <input type="radio" name="idle" value={"yes"} />
+          <input type="radio" name="idle" value={"no"} />
+        </div>
         <div className={styles.battery}>
-          <label>Battery Dimensions</label>
+          <label>Battery Dimensions (mm)</label>
           <input
-            type="text"
+            type="number"
             placeholder="Length"
             spellCheck="false"
             name="carBrand"
             required
           ></input>
           <input
-            type="text"
+            type="number"
             placeholder="Width"
             spellCheck="false"
             name="carModel"
             required
           ></input>
           <input
-            type="text"
+            type="number"
             placeholder="Height"
             spellCheck="false"
             name="carYear"
@@ -80,8 +84,7 @@ function EnquiryForm() {
           ></input>
         </div>
         <div className={styles.batteryImages}>
-          <label>Battery Image AHHHHH</label>
-
+          <label>Battery Image</label>
           <ImageUpload />
         </div>
       </form>

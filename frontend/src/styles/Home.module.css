@@ -103,6 +103,16 @@ h3 {
   align-items: center;
 }
 
+.idle {
+  display: flex;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 @media screen and (max-width: 1000px) {
   .intro {
     display: flex;
