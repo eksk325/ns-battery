@@ -1,0 +1,140 @@
+* {
+  font-family: "Fira Sans", sans-serif;
+}
+
+.title {
+  padding-top: 15px;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  justify-content: space-evenly;
+  margin: auto;
+  width: 90%;
+}
+
+span {
+  font-size: 18px;
+  padding: 5px;
+}
+
+.open {
+  width: 33%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hours {
+  display: flex;
+  padding: 10px;
+}
+
+.days {
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.time {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact {
+  width: 33%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact span {
+  padding-bottom: 30px;
+}
+
+.contact i {
+  padding-top: 15px;
+  padding-bottom: 5px;
+}
+
+.location {
+  width: 33%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.location img {
+  width: 70%;
+  height: auto;
+  padding-top: 10px;
+}
+
+.line {
+  width: 90%;
+}
+
+.message h3 {
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+.message {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin: auto;
+  padding-bottom: 90px;
+  align-items: center;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+}
+
+.forms {
+  display: flex;
+  justify-content: center;
+}
+
+.details input {
+  margin: 10px;
+  padding: 15px 27px;
+  text-align: center;
+  border: 1.5px solid;
+  font-size: 15px;
+  width: 13rem;
+  border-radius: 12px;
+}
+
+.messagebox textarea {
+  margin: 10px;
+  padding: 13px 27px;
+  text-align: left;
+  border: 1.5px solid;
+  font-size: 15px;
+  width: 25rem;
+  height: 10rem;
+  border-radius: 12px;
+  font-family: "Fira Sans", sans-serif;
+  resize: none;
+}
+
+.messageButton {
+  border: none;
+  border-radius: 30px;
+  padding: 18px 28px;
+  margin: 40px;
+  font-size: 18px;
+  background-color: #26327a;
+  color: white;
+  width: 20%;
+}
+
+.messageButton:hover {
+  cursor: pointer;
+}

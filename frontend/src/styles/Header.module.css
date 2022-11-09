@@ -1,0 +1,41 @@
+* {
+  user-select: none;
+}
+
+.navBar {
+  background-color: #26327a;
+  color: white;
+  display: flex;
+  padding: 0px 12px;
+  justify-content: center;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+
+.image {
+  height: 100px;
+}
+
+.navMenu {
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+  margin: 8px;
+}
+
+.navMenu li {
+  padding: 8px 20px;
+}
+
+@media screen and (max-width: 768px) {
+}

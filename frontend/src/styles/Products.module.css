@@ -1,0 +1,35 @@
+.title {
+  padding-top: 15px;
+  text-align: center;
+}
+
+.switcher {
+  display: flex;
+  justify-content: space-around;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+
+.switcher > button {
+  font-family: "Fira Sans", sans-serif;
+  font-size: 18px;
+  background-color: transparent;
+  border-width: 0px;
+}
+
+.switcher > button:hover {
+  cursor: pointer;
+}
+
+.switcher > * {
+  padding: 0 10px;
+}
+
+.switcher > p {
+  font-size: 20px;
+  user-select: none;
+}

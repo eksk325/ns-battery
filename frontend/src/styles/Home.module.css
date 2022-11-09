@@ -1,0 +1,160 @@
+html,
+body {
+  overflow-x: hidden;
+}
+
+.body {
+  display: block;
+}
+
+.intro {
+  display: flex;
+  padding: 60px;
+  justify-content: center;
+}
+
+.intro img {
+  height: 200px;
+  padding-left: 70px;
+}
+
+h1 {
+  font-size: 50px;
+  padding: 0 15px;
+}
+
+h3 {
+  font-size: 30px;
+  text-align: center;
+  margin: 0;
+  padding: 0 15px;
+  padding-top: 60px;
+}
+
+.request {
+  text-align: center;
+  font-size: 30px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.request label {
+  font-size: 20px;
+  padding-top: 25px;
+}
+
+.enquiryForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.enquiryForm input {
+  margin: 10px;
+  padding: 13px 27px;
+  text-align: center;
+  display: flex;
+  border: 1.5px solid;
+  font-size: 15px;
+  width: 15rem;
+  border-radius: 12px;
+}
+
+.sendButton {
+  border: none;
+  font-family: "Fira Sans", sans-serif;
+  border-radius: 30px;
+  padding: 18px 28px;
+  margin: 40px;
+  font-size: 18px;
+  background-color: #26327a;
+  color: white;
+}
+
+.sendButton:hover {
+  cursor: pointer;
+}
+
+.best {
+  text-align: center;
+  font-size: 30px;
+  padding: 90px;
+}
+
+.productGrid {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding-left: 0;
+}
+
+.productGrid li {
+  border: 1px solid black;
+  padding: 80px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.formRight input {
+  margin: 10px;
+  padding: 13px 27px;
+  text-align: center;
+  display: flex;
+  border: 1.5px solid;
+  font-size: 15px;
+  width: 200px;
+}
+
+.enquiryContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.instruction {
+  font-size: 15px !important;
+  padding-top: 5px !important;
+}
+
+.uploadImages {
+  visibility: hidden;
+}
+
+.uploadBox {
+  margin: 20px 20px;
+  border: 1.5px solid black;
+  border-radius: 12px;
+  width: 30rem;
+}
+
+.uploadBox label {
+  font-size: 2rem;
+  padding: 20px 20px;
+}
+
+.uploadBox label:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1000px) {
+  .intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .intro h1 {
+    text-align: center;
+    font-size: 40px;
+  }
+
+  .intro img {
+    padding: 0px;
+    width: 200px;
+    height: auto;
+  }
+}

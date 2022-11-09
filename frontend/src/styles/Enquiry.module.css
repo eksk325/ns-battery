@@ -1,0 +1,39 @@
+.request {
+  text-align: center;
+  font-size: 30px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.request label {
+  font-size: 20px;
+  padding-top: 25px;
+}
+
+.enquiryForm {
+  display: block;
+}
+
+.enquiryForm input {
+  margin: 10px;
+  padding: 13px 27px;
+  text-align: center;
+  display: flex;
+  border: 1.5px solid;
+  font-size: 15px;
+  width: 280px;
+  border-radius: 12px;
+}
+
+.sendButton {
+  border: none;
+  font-family: "Fira Sans", sans-serif;
+  border-radius: 30px;
+  padding: 18px 28px;
+  margin: 40px;
+  font-size: 18px;
+  background-color: #26327a;
+  color: white;
+}

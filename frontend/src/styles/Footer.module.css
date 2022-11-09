@@ -1,0 +1,77 @@
+.footerBar {
+  padding: 20px;
+  background-color: #26327a;
+  color: white;
+  text-align: center;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-evenly;
+  padding-bottom: 20px;
+}
+
+.information {
+  display: block;
+  padding: 20px;
+}
+
+.information > div {
+  display: flex;
+  justify-content: center;
+  padding: 10px 12px;
+  padding-bottom: 10px;
+}
+
+.information > div > i {
+  text-align: center;
+  padding-right: 20px;
+}
+
+label {
+  display: block;
+  padding: 5px 12px;
+}
+
+.links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.links label:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.action {
+  margin: 0;
+}
+
+.action > button {
+  border: none;
+  font-family: "Fira Sans", sans-serif;
+  border-radius: 30px;
+  padding: 18px 28px;
+  margin-top: 15px;
+  font-size: 18px;
+}
+
+.action button:hover {
+  cursor: pointer;
+}
+
+.copyright {
+  padding-top: 20px;
+}
+
+img {
+  height: 50px;
+  padding: 0 30px;
+}
+
+.under {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+}
