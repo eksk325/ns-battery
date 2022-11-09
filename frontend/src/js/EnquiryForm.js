@@ -80,7 +80,7 @@ function EnquiryForm() {
           ></input>
         </div>
         <div className={styles.batteryImages}>
-          <label>Battery Image</label>
+          <label>Battery Image AHHHHH</label>
 
           <ImageUpload />
         </div>
