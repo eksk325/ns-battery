@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/ns-battery/static/css/main.4c3928cc.css",
+    "main.js": "/ns-battery/static/js/main.ea53a1ef.js",
+    "static/media/map.png": "/ns-battery/static/media/map.e0ee91a4d364b497a691.png",
+    "static/media/century.jpg": "/ns-battery/static/media/century.5c821e4e102930ceb4e9.jpg",
+    "static/media/centuryBattery.jpg": "/ns-battery/static/media/centuryBattery.5a827eaed06f63bf7494.jpg",
+    "index.html": "/ns-battery/index.html",
+    "main.4c3928cc.css.map": "/ns-battery/static/css/main.4c3928cc.css.map",
+    "main.ea53a1ef.js.map": "/ns-battery/static/js/main.ea53a1ef.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4c3928cc.css",
+    "static/js/main.ea53a1ef.js"
+  ]
+}
