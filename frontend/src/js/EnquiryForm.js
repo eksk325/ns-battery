@@ -55,8 +55,12 @@ function EnquiryForm() {
             required
           ></input>
         </div>
-        <label>Does your car have idle start-stop?</label>
         <div className={styles.idle}>
+          <label>Does your car have idle start-stop?</label>
+          <i className="fa-regular fa-circle-question"></i>
+        </div>
+
+        <div className={styles.idleBox}>
           <div
             style={{
               display: "flex",

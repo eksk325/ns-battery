@@ -105,6 +105,21 @@ h3 {
 
 .idle {
   display: flex;
+  align-items: center;
+}
+
+.idle i {
+  padding-top: 25px;
+  font-size: 20px;
+}
+
+.idle i:hover {
+  cursor: pointer;
+  background-color: black;
+}
+
+.idleBox {
+  display: flex;
   justify-content: center;
   border: 1.5px solid black;
   width: 240px;
@@ -123,12 +138,16 @@ input[type="radio"] {
   -webkit-appearance: none;
   appearance: none;
   border-radius: 50%;
-  border: 1px solid black;
+  border: 1.5px solid black;
   background: #fff;
+  margin-bottom: 25px;
 }
 
 input[type="radio"]:checked {
   background: #26327a;
+}
+
+i:hover {
 }
 
 @media screen and (max-width: 1000px) {
