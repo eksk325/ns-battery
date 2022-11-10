@@ -32,7 +32,10 @@ function ImageUpload() {
             <label>
               Attach a photo of your current battery from the top view.
             </label>
-            <img src={example} style={{ width: "200px", height: "auto" }} />
+            <img
+              src={example}
+              style={{ width: "80%", height: "auto", paddingBottom: "15px" }}
+            />
           </div>
         )}
 

@@ -67,8 +67,8 @@
 
 .outputImage {
   width: 100%;
-  height: auto;
-  padding-top: 20px;
+  height: 100%;
+  padding-top: 10px;
 }
 
 .outputImage[src] {

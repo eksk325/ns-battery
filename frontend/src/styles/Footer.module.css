@@ -28,6 +28,10 @@
   padding-right: 20px;
 }
 
+.information label {
+  user-select: text;
+}
+
 label {
   display: block;
   padding: 5px 12px;

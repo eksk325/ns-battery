@@ -68,14 +68,16 @@ function ContactUs() {
           <h3>Contact Details</h3>
           <br />
           <i class="fa-solid fa-phone fa-2x"></i>
-          <span>021 152 3789</span>
+          <span style={{ userSelect: "text" }}>021 152 3789</span>
           <i class="fa-solid fa-envelope fa-2x"></i>
-          <span>raehane@gmail.com</span>
+          <span style={{ userSelect: "text" }}>raehane@gmail.com</span>
         </div>
         <div className={styles.location}>
           <h3>How to get here</h3>
           <br />
-          <span>8A Parity Place, Hillcrest, Auckland</span>
+          <span style={{ userSelect: "text" }}>
+            8A Parity Place, Hillcrest, Auckland
+          </span>
           <img src={map}></img>
         </div>
       </div>
