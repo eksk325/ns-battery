@@ -1,21 +1,51 @@
 import styles from "../styles/Upload.module.css";
 import { useState } from "react";
+import example from "../images/exampleImage.png";
 
 function ImageUpload() {
   const [imageUploaded, setImageUploaded] = useState(false);
   const [imageSource, setImageSource] = useState("");
+  const [isHovering, setIsHovering] = useState(false);
 
-  var displayImage = function (event) {
+  const displayImage = function (event) {
     setImageUploaded(true);
     setImageSource(URL.createObjectURL(event.target.files[0]));
+  };
+
+  const showInstruction = function () {
+    document.getElementsByClassName(".imageTooltip").style.visibility =
+      "visible";
+  };
+
+  const handleMouseOver = () => {
+    setIsHovering(true);
+    console.log("HOVER");
+  };
+
+  const handleMouseOut = () => {
+    setIsHovering(false);
   };
 
   return (
     <div>
       <div className={styles.uploadBox}>
-        <label className={styles.instruction}>
-          Attach a photo of your current battery from the top view
-        </label>
+        {isHovering && (
+          <div className={styles.imageTooltip}>
+            <label>
+              Attach a photo of your current battery from the top view.
+            </label>
+            <img src={example} style={{ width: "200px", height: "auto" }} />
+          </div>
+        )}
+
+        <div className={styles.tooltipIcon}>
+          <i
+            className="fa-regular fa-circle-question"
+            onMouseOver={handleMouseOver}
+            onMouseOut={handleMouseOut}
+          ></i>
+        </div>
+
         <div className={styles.imageBox}>
           {!imageUploaded ? null : (
             <img src={imageSource} className={styles.outputImage} />

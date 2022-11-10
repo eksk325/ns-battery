@@ -7,23 +7,26 @@
   align-items: center;
 }
 
-.request label {
+.sectionHeader {
   font-size: 20px;
   padding-top: 25px;
 }
 
 .enquiryForm {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .enquiryForm input {
-  margin: 10px;
-  padding: 13px 27px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  padding: 13px 0px;
   text-align: center;
   display: flex;
-  border: 1.5px solid;
+  border: 1.5px solid black;
   font-size: 15px;
-  width: 280px;
+  width: 240px;
   border-radius: 12px;
 }
 
@@ -32,8 +35,45 @@
   font-family: "Fira Sans", sans-serif;
   border-radius: 30px;
   padding: 18px 28px;
-  margin: 40px;
+  margin: 50px 0;
   font-size: 18px;
   background-color: #26327a;
   color: white;
+}
+
+.sendButton:hover {
+  cursor: pointer;
+}
+
+.idleBox {
+  display: flex;
+  justify-content: center;
+  border: 1.5px solid black;
+  width: 240px;
+  border-radius: 12px;
+  margin-top: 5px;
+  padding-top: 20px;
+}
+
+.idleBox label {
+  padding-top: 0;
+}
+
+input[type="radio"] {
+  width: 28px;
+  height: 28px;
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 50%;
+  border: 1.5px solid black;
+  background: #fff;
+  margin-bottom: 25px;
+}
+
+input[type="radio"]:hover {
+  cursor: pointer;
+}
+
+input[type="radio"]:checked {
+  background: #26327a;
 }

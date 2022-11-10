@@ -31,52 +31,6 @@ h3 {
   padding-top: 60px;
 }
 
-.request {
-  text-align: center;
-  font-size: 30px;
-  padding: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.request label {
-  font-size: 20px;
-  padding-top: 25px;
-}
-
-.enquiryForm {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.enquiryForm input {
-  margin: 10px;
-  padding: 13px 0px;
-  text-align: center;
-  display: flex;
-  border: 1.5px solid black;
-  font-size: 15px;
-  width: 240px;
-  border-radius: 12px;
-}
-
-.sendButton {
-  border: none;
-  font-family: "Fira Sans", sans-serif;
-  border-radius: 30px;
-  padding: 18px 28px;
-  margin: 50px 0;
-  font-size: 18px;
-  background-color: #26327a;
-  color: white;
-}
-
-.sendButton:hover {
-  cursor: pointer;
-}
-
 .best {
   text-align: center;
   font-size: 30px;
@@ -97,57 +51,10 @@ h3 {
   margin-right: 10px;
 }
 
-.enquiryContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.idle {
-  display: flex;
-  align-items: center;
-}
-
-.idle i {
-  padding-top: 25px;
-  font-size: 20px;
-}
-
-.idle i:hover {
-  cursor: pointer;
-  background-color: black;
-}
-
-.idleBox {
-  display: flex;
-  justify-content: center;
-  border: 1.5px solid black;
-  width: 240px;
-  border-radius: 12px;
-}
-
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
-}
-
-input[type="radio"] {
-  width: 28px;
-  height: 28px;
-  -webkit-appearance: none;
-  appearance: none;
-  border-radius: 50%;
-  border: 1.5px solid black;
-  background: #fff;
-  margin-bottom: 25px;
-}
-
-input[type="radio"]:checked {
-  background: #26327a;
-}
-
-i:hover {
 }
 
 @media screen and (max-width: 1000px) {

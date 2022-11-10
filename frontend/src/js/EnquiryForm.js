@@ -1,4 +1,4 @@
-import styles from "../styles/Home.module.css";
+import styles from "../styles/Enquiry.module.css";
 
 import ImageUpload from "./ImageUpload";
 
@@ -7,7 +7,7 @@ function EnquiryForm() {
     <div className={styles.request}>
       <form className={styles.enquiryForm}>
         <div className={styles.personal}>
-          <label>Personal Details</label>
+          <label className={styles.sectionHeader}>Personal Details</label>
           <input
             type="text"
             placeholder="Name"
@@ -32,7 +32,7 @@ function EnquiryForm() {
         </div>
 
         <div className={styles.car}>
-          <label>Car Details</label>
+          <label className={styles.sectionHeader}>Car Details</label>
           <input
             type="text"
             placeholder="Car make"
@@ -55,11 +55,10 @@ function EnquiryForm() {
             required
           ></input>
         </div>
-        <div className={styles.idle}>
-          <label>Does your car have idle start-stop?</label>
-          <i className="fa-regular fa-circle-question"></i>
-        </div>
 
+        <label className={styles.sectionHeader}>
+          Does your car have idle start-stop?
+        </label>
         <div className={styles.idleBox}>
           <div
             style={{
@@ -69,7 +68,7 @@ function EnquiryForm() {
               width: "40%",
             }}
           >
-            <label for="yes" style={{ fontSize: "16px" }}>
+            <label htmlFor="yes" style={{ fontSize: "16px" }}>
               Yes
             </label>
             <input type="radio" name="idle" value={"yes"} id="yes" />
@@ -82,14 +81,15 @@ function EnquiryForm() {
               width: "40%",
             }}
           >
-            <label for="no" style={{ fontSize: "16px" }}>
+            <label htmlFor="no" style={{ fontSize: "16px" }}>
               No
             </label>
             <input type="radio" name="idle" value={"no"} id="no" />
           </div>
         </div>
+
+        <label className={styles.sectionHeader}>Battery Dimensions (mm)</label>
         <div className={styles.battery}>
-          <label>Battery Dimensions (mm)</label>
           <input
             type="number"
             placeholder="Length"
@@ -112,8 +112,15 @@ function EnquiryForm() {
             required
           ></input>
         </div>
-        <div className={styles.batteryImages}>
-          <label>Battery Image</label>
+        <div className={styles.batteryImage}>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+            }}
+          >
+            <label className={styles.sectionHeader}>Battery Photo</label>
+          </div>
           <ImageUpload />
         </div>
       </form>
