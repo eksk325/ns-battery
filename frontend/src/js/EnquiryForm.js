@@ -55,9 +55,34 @@ function EnquiryForm() {
             required
           ></input>
         </div>
+        <label>Does your car have idle start-stop?</label>
         <div className={styles.idle}>
-          <input type="radio" name="idle" value={"yes"} />
-          <input type="radio" name="idle" value={"no"} />
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              width: "40%",
+            }}
+          >
+            <label for="yes" style={{ fontSize: "16px" }}>
+              Yes
+            </label>
+            <input type="radio" name="idle" value={"yes"} id="yes" />
+          </div>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              width: "40%",
+            }}
+          >
+            <label for="no" style={{ fontSize: "16px" }}>
+              No
+            </label>
+            <input type="radio" name="idle" value={"no"} id="no" />
+          </div>
         </div>
         <div className={styles.battery}>
           <label>Battery Dimensions (mm)</label>

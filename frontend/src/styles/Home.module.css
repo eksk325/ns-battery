@@ -56,7 +56,7 @@ h3 {
   padding: 13px 0px;
   text-align: center;
   display: flex;
-  border: 1.5px solid;
+  border: 1.5px solid black;
   font-size: 15px;
   width: 240px;
   border-radius: 12px;
@@ -105,12 +105,30 @@ h3 {
 
 .idle {
   display: flex;
+  justify-content: center;
+  border: 1.5px solid black;
+  width: 240px;
+  border-radius: 12px;
 }
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+input[type="radio"] {
+  width: 28px;
+  height: 28px;
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 50%;
+  border: 1px solid black;
+  background: #fff;
+}
+
+input[type="radio"]:checked {
+  background: #26327a;
 }
 
 @media screen and (max-width: 1000px) {
