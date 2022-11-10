@@ -68,9 +68,7 @@ function EnquiryForm() {
               width: "40%",
             }}
           >
-            <label htmlFor="yes" style={{ fontSize: "16px" }}>
-              Yes
-            </label>
+            <label style={{ fontSize: "16px" }}>Yes</label>
             <input type="radio" name="idle" value={"yes"} id="yes" />
           </div>
           <div
@@ -81,9 +79,7 @@ function EnquiryForm() {
               width: "40%",
             }}
           >
-            <label htmlFor="no" style={{ fontSize: "16px" }}>
-              No
-            </label>
+            <label style={{ fontSize: "16px" }}>No</label>
             <input type="radio" name="idle" value={"no"} id="no" />
           </div>
         </div>

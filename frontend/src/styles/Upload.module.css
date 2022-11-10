@@ -14,14 +14,10 @@
 }
 
 .imageTooltip {
-  border: 1.5px solid;
-  border-radius: 12px;
-  position: absolute;
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 240px;
-  margin-top: 50px;
   background-color: white;
 }
 

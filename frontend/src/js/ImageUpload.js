@@ -19,7 +19,6 @@ function ImageUpload() {
 
   const handleMouseOver = () => {
     setIsHovering(true);
-    console.log("HOVER");
   };
 
   const handleMouseOut = () => {
@@ -29,6 +28,14 @@ function ImageUpload() {
   return (
     <div>
       <div className={styles.uploadBox}>
+        <div className={styles.tooltipIcon}>
+          <i
+            className="fa-regular fa-circle-question"
+            onMouseOver={handleMouseOver}
+            onMouseOut={handleMouseOut}
+          ></i>
+        </div>
+
         {isHovering && (
           <div className={styles.imageTooltip}>
             <label>
@@ -37,14 +44,6 @@ function ImageUpload() {
             <img src={example} style={{ width: "200px", height: "auto" }} />
           </div>
         )}
-
-        <div className={styles.tooltipIcon}>
-          <i
-            className="fa-regular fa-circle-question"
-            onMouseOver={handleMouseOver}
-            onMouseOut={handleMouseOut}
-          ></i>
-        </div>
 
         <div className={styles.imageBox}>
           {!imageUploaded ? null : (
