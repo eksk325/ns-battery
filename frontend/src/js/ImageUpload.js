@@ -5,38 +5,29 @@ import example from "../images/exampleImage.png";
 function ImageUpload() {
   const [imageUploaded, setImageUploaded] = useState(false);
   const [imageSource, setImageSource] = useState("");
-  const [isHovering, setIsHovering] = useState(false);
+  const [isClicked, setIsClicked] = useState(false);
 
   const displayImage = function (event) {
     setImageUploaded(true);
     setImageSource(URL.createObjectURL(event.target.files[0]));
   };
 
-  const showInstruction = function () {
-    document.getElementsByClassName(".imageTooltip").style.visibility =
-      "visible";
-  };
-
-  const handleMouseOver = () => {
-    setIsHovering(true);
-  };
-
-  const handleMouseOut = () => {
-    setIsHovering(false);
+  const clicked = () => {
+    isClicked ? setIsClicked(false) : setIsClicked(true);
   };
 
   return (
     <div>
       <div className={styles.uploadBox}>
         <div className={styles.tooltipIcon}>
-          <i
-            className="fa-regular fa-circle-question"
-            onMouseOver={handleMouseOver}
-            onMouseOut={handleMouseOut}
-          ></i>
+          {!isClicked ? (
+            <i className="fa-regular fa-circle-question" onClick={clicked}></i>
+          ) : (
+            <i class="fa-regular fa-circle-xmark" onClick={clicked}></i>
+          )}
         </div>
 
-        {isHovering && (
+        {isClicked && (
           <div className={styles.imageTooltip}>
             <label>
               Attach a photo of your current battery from the top view.
