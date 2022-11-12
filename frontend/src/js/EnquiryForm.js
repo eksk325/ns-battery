@@ -1,8 +1,53 @@
+import { useEffect } from "react";
 import styles from "../styles/Enquiry.module.css";
 
 import ImageUpload from "./ImageUpload";
 
 function EnquiryForm() {
+  document.addEventListener("submit", function (e) {
+    const name = document.getElementById("customerName");
+    const email = document.getElementById("customerEmail");
+    const phoneNum = document.getElementById("customerPhone");
+
+    const carMake = document.getElementById("carMake");
+    const carModel = document.getElementById("carModel");
+    const carYear = document.getElementById("carYear");
+
+    const idle = document.getElementsByName("idle")[0];
+
+    const length = document.getElementById("length");
+    const width = document.getElementById("width");
+    const height = document.getElementById("height");
+
+    let formData = {
+      name: name.value,
+      email: email.value,
+      phoneNum: phoneNum.value,
+      carMake: carMake.value,
+      carModel: carModel.value,
+      carYear: carYear.value,
+      idle: idle.checked,
+      dimensions: [length.value, width.value, height.value],
+    };
+
+    console.log(formData);
+
+    let xhr = new XMLHttpRequest();
+    xhr.open("POST", "/");
+    xhr.setRequestHeader("content-type", "application/json");
+    xhr.onload = function () {
+      console.log(xhr.responseText);
+
+      if (xhr.responseText == "success") {
+        alert("Email sent");
+      } else {
+        alert("Something went wrong...");
+      }
+    };
+
+    xhr.send(JSON.stringify(formData));
+  });
+
   return (
     <div className={styles.request}>
       <form className={styles.enquiryForm}>
@@ -12,21 +57,21 @@ function EnquiryForm() {
             type="text"
             placeholder="Name"
             spellCheck="false"
-            name="customerName"
+            id="customerName"
             required
           ></input>
           <input
             type="email"
             placeholder="Email"
             spellCheck="false"
-            name="customerEmail"
+            id="customerEmail"
             required
           ></input>
           <input
             type="tel"
             placeholder="Phone number"
             spellCheck="false"
-            name="customerPhone"
+            id="customerPhone"
             required
           ></input>
         </div>
@@ -37,21 +82,21 @@ function EnquiryForm() {
             type="text"
             placeholder="Car make"
             spellCheck="false"
-            name="carBrand"
+            id="carMake"
             required
           ></input>
           <input
             type="text"
             placeholder="Car model"
             spellCheck="false"
-            name="carModel"
+            id="carModel"
             required
           ></input>
           <input
-            type="text"
+            type="number"
             placeholder="Car year"
             spellCheck="false"
-            name="carYear"
+            id="carYear"
             required
           ></input>
         </div>
@@ -69,7 +114,7 @@ function EnquiryForm() {
             }}
           >
             <label style={{ fontSize: "16px" }}>Yes</label>
-            <input type="radio" name="idle" value={"yes"} id="yes" />
+            <input type="radio" name="idle" value={"yes"} id="yes" required />
           </div>
           <div
             style={{
@@ -80,7 +125,7 @@ function EnquiryForm() {
             }}
           >
             <label style={{ fontSize: "16px" }}>No</label>
-            <input type="radio" name="idle" value={"no"} id="no" />
+            <input type="radio" name="idle" value={"no"} id="no" required />
           </div>
         </div>
 
@@ -90,21 +135,21 @@ function EnquiryForm() {
             type="number"
             placeholder="Length"
             spellCheck="false"
-            name="carBrand"
+            id="length"
             required
           ></input>
           <input
             type="number"
             placeholder="Width"
             spellCheck="false"
-            name="carModel"
+            id="width"
             required
           ></input>
           <input
             type="number"
             placeholder="Height"
             spellCheck="false"
-            name="carYear"
+            id="height"
             required
           ></input>
         </div>
@@ -119,9 +164,10 @@ function EnquiryForm() {
           </div>
           <ImageUpload />
         </div>
+        <button className={styles.sendButton} type="submit">
+          Send Request
+        </button>
       </form>
-
-      <button className={styles.sendButton}>Send Request</button>
     </div>
   );
 }

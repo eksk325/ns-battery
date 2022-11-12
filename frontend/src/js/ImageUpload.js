@@ -1,6 +1,6 @@
 import styles from "../styles/Upload.module.css";
 import { useState } from "react";
-import example from "../images/exampleImage.png";
+import example from "../images/exampleImage.jpg";
 
 function ImageUpload() {
   const [imageUploaded, setImageUploaded] = useState(false);
@@ -23,7 +23,7 @@ function ImageUpload() {
           {!isClicked ? (
             <i className="fa-regular fa-circle-question" onClick={clicked}></i>
           ) : (
-            <i class="fa-regular fa-circle-xmark" onClick={clicked}></i>
+            <i className="fa-regular fa-circle-xmark" onClick={clicked}></i>
           )}
         </div>
 
@@ -35,13 +35,19 @@ function ImageUpload() {
             <img
               src={example}
               style={{ width: "80%", height: "auto", paddingBottom: "15px" }}
+              alt="Example of a battery from the top view"
             />
           </div>
         )}
 
         <div className={styles.imageBox}>
           {!imageUploaded ? null : (
-            <img src={imageSource} className={styles.outputImage} />
+            <img
+              src={imageSource}
+              className={styles.outputImage}
+              id="userUploadImg"
+              alt="User's battery"
+            />
           )}
         </div>
 
