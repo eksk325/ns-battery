@@ -7,6 +7,8 @@ import ContactUs from "./routes/ContactUs";
 import Quote from "./routes/Quote";
 import Login from "./routes/Login";
 import Admin from "./routes/Admin";
+import Success from "./routes/Success";
+
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
@@ -20,6 +22,7 @@ function App() {
         <Route path="/quote" element={<Quote />}></Route>
         <Route path="/admin-login" element={<Login />}></Route>
         <Route path="/raehan-login" element={<Admin />}></Route>
+        <Route path="/submitted" element={<Success />}></Route>
       </Routes>
       <Footer />
     </Router>

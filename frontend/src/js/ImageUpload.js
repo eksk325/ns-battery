@@ -52,19 +52,20 @@ function ImageUpload() {
         </div>
 
         <div className={styles.uploadIcon}>
-          <label htmlFor="batteryImages">
+          <label htmlFor="batteryImage">
             <i className="fa-solid fa-arrow-up-from-bracket"></i>
           </label>
         </div>
 
         <input
           accept="image/*"
-          id="batteryImages"
+          id="batteryImage"
           className={styles.uploadImages}
           type="file"
           capture="environment"
           multiple
           onChange={displayImage}
+          name="userImage"
         />
       </div>
     </div>
