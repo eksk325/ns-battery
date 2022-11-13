@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/ns-battery/static/css/main.840fb1fb.css",
-    "main.js": "/ns-battery/static/js/main.ea6673de.js",
-    "static/media/exampleImage.jpg": "/ns-battery/static/media/exampleImage.39678ef3b6c28d81fc16.jpg",
+    "main.css": "/ns-battery/static/css/main.425da83f.css",
+    "main.js": "/ns-battery/static/js/main.49b06a23.js",
+    "static/media/exampleImage.jpg": "/ns-battery/static/media/exampleImage.2bb17d88765fb41fcc36.jpg",
     "static/media/map.png": "/ns-battery/static/media/map.e0ee91a4d364b497a691.png",
     "static/media/century.jpg": "/ns-battery/static/media/century.5c821e4e102930ceb4e9.jpg",
     "static/media/centuryBattery.jpg": "/ns-battery/static/media/centuryBattery.5a827eaed06f63bf7494.jpg",
     "index.html": "/ns-battery/index.html",
-    "main.840fb1fb.css.map": "/ns-battery/static/css/main.840fb1fb.css.map",
-    "main.ea6673de.js.map": "/ns-battery/static/js/main.ea6673de.js.map"
+    "main.425da83f.css.map": "/ns-battery/static/css/main.425da83f.css.map",
+    "main.49b06a23.js.map": "/ns-battery/static/js/main.49b06a23.js.map"
   },
   "entrypoints": [
-    "static/css/main.840fb1fb.css",
-    "static/js/main.ea6673de.js"
+    "static/css/main.425da83f.css",
+    "static/js/main.49b06a23.js"
   ]
 }

@@ -1,0 +1,54 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.heading {
+  font-size: 40px;
+  text-align: center;
+  padding: 35px;
+}
+
+.information {
+  border: 2.5px solid #26327a;
+  border-radius: 15px;
+  width: 400px;
+  margin: auto;
+}
+
+.information table {
+  padding-left: 10px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+.information td {
+  padding-bottom: 15px;
+}
+
+.information th {
+  text-align: right;
+  padding-right: 15px;
+  padding-bottom: 15px;
+}
+
+.homeButton {
+  border: none;
+  font-family: "Fira Sans", sans-serif;
+  border-radius: 30px;
+  padding: 18px 38px;
+  margin: 60px;
+  font-size: 18px;
+  color: white;
+  background-color: #26327a;
+  width: fit-content;
+}
+
+.homeButton:hover {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1000px) {
+  .information {
+    width: 90%;
+  }
+}

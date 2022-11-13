@@ -12,6 +12,24 @@ function EnquiryForm() {
     document.getElementById("idleText").value = "없음 (무)";
   };
 
+  // Display information to the user when they submit
+  const displayInfo = function () {
+    let formData = {
+      name: document.getElementById("customerName").value,
+      email: document.getElementById("customerEmail").value,
+      phoneNum: document.getElementById("customerPhone").value,
+      carMake: document.getElementById("carMake").value,
+      carModel: document.getElementById("carModel").value,
+      carYear: document.getElementById("carYear").value,
+      idle: `${document.getElementById("yes").checked ? "yes" : "no"}`,
+      length: document.getElementById("length").value,
+      width: document.getElementById("width").value,
+      height: document.getElementById("height").value,
+    };
+
+    sessionStorage.setItem("formData", JSON.stringify(formData));
+  };
+
   return (
     <div className={styles.request}>
       <form
@@ -19,6 +37,8 @@ function EnquiryForm() {
         encType="multipart/form-data"
         method="post"
         action="send-form"
+        onSubmit={displayInfo}
+        id="enquiryForm"
       >
         <div className={styles.personal}>
           <label className={styles.sectionHeader}>Personal Details</label>
