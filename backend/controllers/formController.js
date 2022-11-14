@@ -121,6 +121,7 @@ const getForm = (req, res) => {
 };
 
 const postForm = (req, res) => {
+  const notSubPath = path.resolve("not-submitted.png");
   upload(req, res, (error) => {
     if (error) {
       console.log("Error with uploading file");
@@ -136,7 +137,7 @@ const postForm = (req, res) => {
         length: req.body.length,
         width: req.body.width,
         height: req.body.height,
-        path: req.file.path,
+        path: `${typeof req.file == "undefined" ? notSubPath : req.file.path}`,
       };
 
       sendEmail(userInfo)
