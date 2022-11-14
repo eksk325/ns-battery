@@ -5,6 +5,21 @@ function ContactUs() {
   const date = new Date();
   const dayIndex = date.getDay();
 
+  const submitMessage = () => {
+    let formData = {
+      name: document.getElementById("name").value,
+      email: document.getElementById("email").value,
+      phoneNum: document.getElementById("phoneNum").value,
+      message: document.getElementById("message").value,
+    };
+
+    let xhr = new XMLHttpRequest();
+    xhr.open("POST", "/send-msg");
+    xhr.setRequestHeader("content-type", "application/json");
+
+    xhr.send(JSON.stringify(formData));
+  };
+
   return (
     <div>
       <div className={styles.title}>
@@ -81,7 +96,7 @@ function ContactUs() {
           <img src={map}></img>
         </div>
       </div>
-      <div className={styles.message}>
+      <form className={styles.message} onSubmit={submitMessage}>
         <h3>Send us a quick message</h3>
         <div className={styles.forms}>
           <div className={styles.details}>
@@ -90,6 +105,7 @@ function ContactUs() {
               placeholder="Name"
               spellCheck="false"
               name="customerName"
+              id="name"
               required
             ></input>
             <input
@@ -97,6 +113,7 @@ function ContactUs() {
               placeholder="Email"
               spellCheck="false"
               name="customerEmail"
+              id="email"
               required
             ></input>
             <input
@@ -104,6 +121,7 @@ function ContactUs() {
               placeholder="Phone number"
               spellCheck="false"
               name="customerNumber"
+              id="phoneNum"
               required
             ></input>
           </div>
@@ -113,12 +131,13 @@ function ContactUs() {
               placeholder="Enter your message here"
               spellCheck="false"
               name="customerMessage"
+              id="message"
               required
             ></textarea>
           </div>
         </div>
         <button className={styles.messageButton}>Send Message</button>
-      </div>
+      </form>
     </div>
   );
 }

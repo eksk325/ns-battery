@@ -60,6 +60,7 @@ label {
   margin-top: 15px;
   font-size: 18px;
   background-color: white;
+  color: black;
 }
 
 .action button:hover {
