@@ -1,10 +1,9 @@
 import styles from "../styles/Header.module.css";
 import logo from "../images/century.jpg";
-import { Link } from "react-router-dom";
-import { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 
 function Header() {
-  const [currentPage, setCurrentPage] = useState("home");
+  const location = useLocation();
 
   return (
     <div>
@@ -19,41 +18,47 @@ function Header() {
           <li>
             <Link
               to="/"
-              style={{ fontWeight: currentPage == "home" ? "bold" : "normal" }}
-              onClick={() => setCurrentPage("home")}
+              style={{ color: location.pathname === "/" ? "yellow" : "white" }}
             >
               Home
             </Link>
           </li>
           <li>
             <Link
-              to="/products"
+              to="/about-us"
               style={{
-                fontWeight: currentPage == "products" ? "bold" : "normal",
+                color: location.pathname === "/about-us" ? "yellow" : "white",
               }}
-              onClick={() => setCurrentPage("products")}
             >
-              Products
+              About Us
             </Link>
           </li>
           <li>
             <Link
               to="/quote"
               style={{
-                fontWeight: currentPage == "request" ? "bold" : "normal",
+                color: location.pathname === "/quote" ? "yellow" : "white",
               }}
-              onClick={() => setCurrentPage("request")}
             >
               Request Battery
             </Link>
           </li>
           <li>
             <Link
+              to="/reviews"
+              style={{
+                color: location.pathname === "/reviews" ? "yellow" : "white",
+              }}
+            >
+              Reviews
+            </Link>
+          </li>
+          <li>
+            <Link
               to="/contact-us"
               style={{
-                fontWeight: currentPage == "contact" ? "bold" : "normal",
+                color: location.pathname === "/contact-us" ? "yellow" : "white",
               }}
-              onClick={() => setCurrentPage("contact")}
             >
               Contact Us
             </Link>

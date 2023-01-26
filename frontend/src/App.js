@@ -1,13 +1,11 @@
-import { useState, useEffect } from "react";
 import Header from "./js/Header";
 import Footer from "./js/Footer";
 import Home from "./routes/Home";
-import Products from "./routes/Products";
 import ContactUs from "./routes/ContactUs";
 import Quote from "./routes/Quote";
-import Login from "./routes/Login";
-import Admin from "./routes/Admin";
 import Success from "./routes/Success";
+import Reviews from "./routes/Reviews";
+import About from "./routes/About";
 
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
 
@@ -17,12 +15,11 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />}></Route>
-        <Route path="/products" element={<Products />}></Route>
+        <Route path="/reviews" element={<Reviews />}></Route>
         <Route path="/contact-us" element={<ContactUs />}></Route>
         <Route path="/quote" element={<Quote />}></Route>
-        <Route path="/admin-login" element={<Login />}></Route>
-        <Route path="/raehan-login" element={<Admin />}></Route>
         <Route path="/submitted" element={<Success />}></Route>
+        <Route path="/about-us" element={<About />}></Route>
       </Routes>
       <Footer />
     </Router>

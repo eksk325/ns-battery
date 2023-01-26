@@ -48,7 +48,6 @@ function EnquiryForm() {
             id="customerName"
             name="name"
             required
-            defaultValue="1"
           ></input>
           <input
             type="email"
@@ -57,7 +56,6 @@ function EnquiryForm() {
             id="customerEmail"
             name="email"
             required
-            defaultValue="lol@gmail.com"
           ></input>
           <input
             type="tel"
@@ -66,7 +64,6 @@ function EnquiryForm() {
             id="customerPhone"
             name="phoneNum"
             required
-            defaultValue="1"
           ></input>
         </div>
 
@@ -79,7 +76,6 @@ function EnquiryForm() {
             id="carMake"
             name="carMake"
             required
-            defaultValue="1"
           ></input>
           <input
             type="text"
@@ -88,7 +84,6 @@ function EnquiryForm() {
             id="carModel"
             name="carModel"
             required
-            defaultValue="1"
           ></input>
           <input
             type="number"
@@ -97,7 +92,6 @@ function EnquiryForm() {
             id="carYear"
             name="carYear"
             required
-            defaultValue="1"
           ></input>
         </div>
 
@@ -163,7 +157,6 @@ function EnquiryForm() {
             id="length"
             name="length"
             required
-            defaultValue="1"
           ></input>
           <input
             type="number"
@@ -172,7 +165,6 @@ function EnquiryForm() {
             id="width"
             name="width"
             required
-            defaultValue="1"
           ></input>
           <input
             type="number"
@@ -181,7 +173,6 @@ function EnquiryForm() {
             id="height"
             name="height"
             required
-            defaultValue="1"
           ></input>
         </div>
         <div className={styles.batteryImage}>

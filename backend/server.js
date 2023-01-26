@@ -4,6 +4,7 @@ const express = require("express");
 const batteryRoutes = require("./routes/batteries");
 const formRoutes = require("./routes/forms");
 const msgRoutes = require("./routes/messages");
+const reviewRoutes = require("./routes/reviews");
 
 const mongoose = require("mongoose");
 const path = require("path");
@@ -24,6 +25,7 @@ app.use((req, res, next) => {
 app.use("/api/batteries", batteryRoutes);
 app.use("/send-form", formRoutes);
 app.use("/send-msg", msgRoutes);
+app.use("/api/reviews", reviewRoutes);
 
 // Conncect to db
 mongoose

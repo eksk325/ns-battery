@@ -1,11 +1,22 @@
 import styles from "../styles/Footer.module.css";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import logo from "../images/century.jpg";
 
 function Footer() {
   const navigate = useNavigate();
+  const location = useLocation();
+
   const requestNow = () => {
+    location.pathname === "/quote" ? refresh() : moveToQuote();
+  };
+
+  const refresh = () => {
+    window.scrollTo(0, 0);
+  };
+
+  const moveToQuote = () => {
     navigate("/quote");
+    window.scrollTo(0, 0);
   };
 
   return (
@@ -16,7 +27,7 @@ function Footer() {
             <div className={styles.address}>
               <i className="fa-solid fa-location-dot fa-2x"></i>
               <label>
-                8A Parity Place<br></br>Hillcrest<br></br>Auckland
+                8A Parity Place <br></br>Hillcrest <br></br>Auckland
               </label>
             </div>
             <div className={styles.email}>
@@ -30,17 +41,17 @@ function Footer() {
               <h2>Quick Links</h2>
             </li>
             <li>
-              <Link to="/about-us">
+              <Link to="/about-us" onClick={refresh}>
                 <label>About Us</label>
               </Link>
             </li>
             <li>
-              <Link to="/products">
-                <label>Our products</label>
+              <Link to="/reviews" onClick={refresh}>
+                <label>Reviews</label>
               </Link>
             </li>
             <li>
-              <Link to="/contact-us">
+              <Link to="/contact-us" onClick={refresh}>
                 <label>Contact Us</label>
               </Link>
             </li>

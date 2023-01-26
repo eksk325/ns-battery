@@ -82,9 +82,9 @@ function ContactUs() {
         <div className={styles.contact}>
           <h3>Contact Details</h3>
           <br />
-          <i class="fa-solid fa-phone fa-2x"></i>
+          <i className="fa-solid fa-phone fa-2x"></i>
           <span style={{ userSelect: "text" }}>021 152 3789</span>
-          <i class="fa-solid fa-envelope fa-2x"></i>
+          <i className="fa-solid fa-envelope fa-2x"></i>
           <span style={{ userSelect: "text" }}>raehane@gmail.com</span>
         </div>
         <div className={styles.location}>
