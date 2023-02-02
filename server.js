@@ -41,7 +41,7 @@ mongoose
   .then(() => {
     // Listen for requests only after connecting to the database
     app.listen(port, () => {
-      console.log(`Connected to db and listening on port ${process.env.PORT}`);
+      console.log(`Connected to db and listening on port ${port}`);
     });
   })
   .catch((err) => {
