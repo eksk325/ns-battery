@@ -125,6 +125,7 @@ const postForm = (req, res) => {
   upload(req, res, (error) => {
     if (error) {
       console.log("Error with uploading file");
+      console.log(error.message);
     } else {
       let userInfo = {
         name: req.body.name,

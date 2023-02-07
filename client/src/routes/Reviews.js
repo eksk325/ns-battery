@@ -4,6 +4,8 @@ import Stars from "../js/Stars";
 
 function Reviews() {
   const [reviews, setReviews] = useState([]);
+  const [loading, setLoading] = useState(true);
+
   useEffect(() => {
     const fetchReviews = async () => {
       const response = await fetch("api/reviews");
@@ -11,13 +13,18 @@ function Reviews() {
 
       if (response.ok) {
         setReviews(json);
+        setLoading(false);
       }
     };
 
     fetchReviews();
   }, []);
 
-  return (
+  return loading ? (
+    <div style={{ height: "1000px", paddingTop: "15px", textAlign: "center" }}>
+      <h1>Reviews</h1>
+    </div>
+  ) : (
     <div style={{ paddingTop: "15px", textAlign: "center" }}>
       <h1>Reviews</h1>
 
