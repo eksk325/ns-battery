@@ -32,48 +32,48 @@ function ContactUs() {
           <br />
           <div className={styles.hours}>
             <div className={styles.days}>
-              <span style={{ fontWeight: dayIndex == 1 ? "bold" : "normal" }}>
+              <span style={{ fontWeight: dayIndex === 1 ? "bold" : "normal" }}>
                 Monday
               </span>
-              <span style={{ fontWeight: dayIndex == 2 ? "bold" : "normal" }}>
+              <span style={{ fontWeight: dayIndex === 2 ? "bold" : "normal" }}>
                 Tuesday
               </span>
-              <span style={{ fontWeight: dayIndex == 3 ? "bold" : "normal" }}>
+              <span style={{ fontWeight: dayIndex === 3 ? "bold" : "normal" }}>
                 Wednesday
               </span>
-              <span style={{ fontWeight: dayIndex == 4 ? "bold" : "normal" }}>
+              <span style={{ fontWeight: dayIndex === 4 ? "bold" : "normal" }}>
                 Thursday
               </span>
-              <span style={{ fontWeight: dayIndex == 5 ? "bold" : "normal" }}>
+              <span style={{ fontWeight: dayIndex === 5 ? "bold" : "normal" }}>
                 Friday
               </span>
-              <span style={{ fontWeight: dayIndex == 6 ? "bold" : "normal" }}>
+              <span style={{ fontWeight: dayIndex === 6 ? "bold" : "normal" }}>
                 Saturday
               </span>
-              <span style={{ fontWeight: dayIndex == 0 ? "bold" : "normal" }}>
+              <span style={{ fontWeight: dayIndex === 0 ? "bold" : "normal" }}>
                 Sunday
               </span>
             </div>
             <div className={styles.time}>
-              <span style={{ fontWeight: dayIndex == 1 ? "bold" : "normal" }}>
+              <span style={{ fontWeight: dayIndex === 1 ? "bold" : "normal" }}>
                 9:00am - 5:30pm
               </span>
-              <span style={{ fontWeight: dayIndex == 2 ? "bold" : "normal" }}>
+              <span style={{ fontWeight: dayIndex === 2 ? "bold" : "normal" }}>
                 10:00am - 5:30pm
               </span>
-              <span style={{ fontWeight: dayIndex == 3 ? "bold" : "normal" }}>
+              <span style={{ fontWeight: dayIndex === 3 ? "bold" : "normal" }}>
                 10:00am - 5:30pm
               </span>
-              <span style={{ fontWeight: dayIndex == 4 ? "bold" : "normal" }}>
+              <span style={{ fontWeight: dayIndex === 4 ? "bold" : "normal" }}>
                 10:00am - 5:30pm
               </span>
-              <span style={{ fontWeight: dayIndex == 5 ? "bold" : "normal" }}>
+              <span style={{ fontWeight: dayIndex === 5 ? "bold" : "normal" }}>
                 10:00am - 5:30pm
               </span>
-              <span style={{ fontWeight: dayIndex == 6 ? "bold" : "normal" }}>
+              <span style={{ fontWeight: dayIndex === 6 ? "bold" : "normal" }}>
                 10:00am - 2:00pm
               </span>
-              <span style={{ fontWeight: dayIndex == 0 ? "bold" : "normal" }}>
+              <span style={{ fontWeight: dayIndex === 0 ? "bold" : "normal" }}>
                 Closed
               </span>
             </div>
