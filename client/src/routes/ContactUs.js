@@ -93,7 +93,7 @@ function ContactUs() {
           <span style={{ userSelect: "text" }}>
             8A Parity Place, Hillcrest, Auckland
           </span>
-          <img src={map}></img>
+          <img src={map} alt="map view"></img>
         </div>
       </div>
       <form className={styles.message} onSubmit={submitMessage}>

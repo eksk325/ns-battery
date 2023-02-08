@@ -1,21 +1,8 @@
-import React, { useEffect, useState } from "react";
 import starImg from "../images/star.png";
 import blankStarImg from "../images/emptystar.png";
 import styles from "../styles/Reviews.module.css";
 
 function Stars({ numStars }) {
-  const [starArray, setStarArray] = useState([]);
-
-  useEffect(() => {
-    for (let i = 0; i < 5; i++) {
-      if (i < numStars) {
-        setStarArray(...starArray, true);
-      } else {
-        setStarArray(...starArray, false);
-      }
-    }
-  }, []);
-
   return (
     <div
       style={{

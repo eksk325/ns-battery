@@ -10,6 +10,8 @@ const mongoose = require("mongoose");
 const path = require("path");
 const port = process.env.PORT || 8000;
 
+const http = require("http");
+
 // Express App
 const app = express();
 
@@ -47,3 +49,9 @@ mongoose
   .catch((err) => {
     console.log(err);
   });
+
+// Code that wakes up the website every 20 minutes so that the server doesn't
+// go to sleep (and therefore loading doesn't take ages)
+setInterval(() => {
+  http.get("https://nsbattery.co.nz");
+}, 1200000);

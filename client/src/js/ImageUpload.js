@@ -1,6 +1,6 @@
 import styles from "../styles/Upload.module.css";
 import { useState } from "react";
-import example from "../images/exampleImage.jpg";
+import example from "../images/exampleImage.jpeg";
 
 function ImageUpload() {
   const [imageUploaded, setImageUploaded] = useState(false);
