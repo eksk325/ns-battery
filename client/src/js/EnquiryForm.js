@@ -1,5 +1,6 @@
 import { useState } from "react";
 import styles from "../styles/Enquiry.module.css";
+import TimeSlot from "../js/TimeSlot";
 
 import ImageUpload from "./ImageUpload";
 
@@ -26,18 +27,30 @@ function EnquiryForm() {
 
   // Display information to the user when they submit
   const displayInfo = function () {
-    let formData = {
-      name: document.getElementById("customerName").value,
-      email: document.getElementById("customerEmail").value,
-      phoneNum: document.getElementById("customerPhone").value,
-      carMake: document.getElementById("carMake").value,
-      carModel: document.getElementById("carModel").value,
-      carYear: document.getElementById("carYear").value,
-      idle: `${document.getElementById("yes").checked ? "yes" : "no"}`,
-      length: document.getElementById("length").value,
-      width: document.getElementById("width").value,
-      height: document.getElementById("height").value,
-    };
+    let formData = {};
+    // If the user knows the model name
+    if (knowModel === 1) {
+      formData = {
+        name: document.getElementById("customerName").value,
+        email: document.getElementById("customerEmail").value,
+        phoneNum: document.getElementById("customerPhone").value,
+        modelName: document.getElementById("modelName").value,
+      };
+    } else {
+      // If the user doesn't know the model name
+      formData = {
+        name: document.getElementById("customerName").value,
+        email: document.getElementById("customerEmail").value,
+        phoneNum: document.getElementById("customerPhone").value,
+        carMake: document.getElementById("carMake").value,
+        carModel: document.getElementById("carModel").value,
+        carYear: document.getElementById("carYear").value,
+        idle: `${document.getElementById("yes").checked ? "yes" : "no"}`,
+        length: document.getElementById("length").value,
+        width: document.getElementById("width").value,
+        height: document.getElementById("height").value,
+      };
+    }
 
     sessionStorage.setItem("formData", JSON.stringify(formData));
   };
@@ -52,36 +65,8 @@ function EnquiryForm() {
         onSubmit={displayInfo}
         id="enquiryForm"
       >
-        <div className={styles.personal}>
-          <label className={styles.sectionHeader}>Personal Details</label>
-          <input
-            type="text"
-            placeholder="Name"
-            spellCheck="false"
-            id="customerName"
-            name="name"
-            required
-          ></input>
-          <input
-            type="email"
-            placeholder="Email"
-            spellCheck="false"
-            id="customerEmail"
-            name="email"
-            required
-          ></input>
-          <input
-            type="tel"
-            placeholder="Phone number"
-            spellCheck="false"
-            id="customerPhone"
-            name="phoneNum"
-            required
-          ></input>
-        </div>
-
         <label className={styles.sectionHeader}>
-          Do you know the model name of your battery?
+          Is your current car battery from Century?
         </label>
         <div className={styles.idleBox}>
           <div
@@ -124,6 +109,40 @@ function EnquiryForm() {
 
         {knowModel === 0 ? (
           <div className={styles.request}>
+            <label className={styles.sectionHeader}>
+              Battery Dimensions (mm)
+            </label>
+            <div className={styles.battery}>
+              <input
+                type="number"
+                placeholder="Length"
+                spellCheck="false"
+                id="length"
+                name="length"
+                required
+              ></input>
+              <input
+                type="number"
+                placeholder="Width"
+                spellCheck="false"
+                id="width"
+                name="width"
+                required
+              ></input>
+            </div>
+            <div className={styles.batteryImage}>
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                }}
+              >
+                <label className={styles.sectionHeader}>
+                  Battery Photo (optional)
+                </label>
+              </div>
+              <ImageUpload />
+            </div>
             <div className={styles.car}>
               <label className={styles.sectionHeader}>Car Details</label>
               <input
@@ -153,7 +172,7 @@ function EnquiryForm() {
             </div>
 
             <label className={styles.sectionHeader}>
-              Does your car have idle start-stop?
+              Does your car have idle stop-start?
             </label>
             <div className={styles.idleBox}>
               <div
@@ -204,49 +223,6 @@ function EnquiryForm() {
               id="idleText"
               name="idleText"
             />
-
-            <label className={styles.sectionHeader}>
-              Battery Dimensions (mm)
-            </label>
-            <div className={styles.battery}>
-              <input
-                type="number"
-                placeholder="Length"
-                spellCheck="false"
-                id="length"
-                name="length"
-                required
-              ></input>
-              <input
-                type="number"
-                placeholder="Width"
-                spellCheck="false"
-                id="width"
-                name="width"
-                required
-              ></input>
-              <input
-                type="number"
-                placeholder="Height"
-                spellCheck="false"
-                id="height"
-                name="height"
-                required
-              ></input>
-            </div>
-            <div className={styles.batteryImage}>
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "center",
-                }}
-              >
-                <label className={styles.sectionHeader}>
-                  Battery Photo (optional)
-                </label>
-              </div>
-              <ImageUpload />
-            </div>
           </div>
         ) : (
           <div>
@@ -260,11 +236,40 @@ function EnquiryForm() {
                   id="modelName"
                   name="modelName"
                   required
+                  style={{ margin: "auto" }}
                 ></input>
+                <TimeSlot />
               </div>
-            ) : (
-              <div></div>
-            )}
+            ) : null}
+          </div>
+        )}
+        {knowModel === -1 ? null : (
+          <div className={styles.personal}>
+            <label className={styles.sectionHeader}>Personal Details</label>
+            <input
+              type="text"
+              placeholder="Name"
+              spellCheck="false"
+              id="customerName"
+              name="name"
+              required
+            ></input>
+            <input
+              type="email"
+              placeholder="Email"
+              spellCheck="false"
+              id="customerEmail"
+              name="email"
+              required
+            ></input>
+            <input
+              type="tel"
+              placeholder="Phone number"
+              spellCheck="false"
+              id="customerPhone"
+              name="phoneNum"
+              required
+            ></input>
           </div>
         )}
 
