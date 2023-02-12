@@ -63,7 +63,12 @@ function TimeSlot() {
         Choose a time slot for pickup
       </label>
 
-      <select className={styles.dropDown} id="pickupDate" required>
+      <select
+        className={styles.dropDown}
+        id="pickupDate"
+        name="pickupDate"
+        required
+      >
         {dateArray.map((date, key) => (
           <option key={key} value={date.toDateString()}>
             {date.toDateString().slice(0, -4)}
@@ -71,7 +76,12 @@ function TimeSlot() {
         ))}
       </select>
 
-      <select className={styles.dropDown} id="pickupTime" required>
+      <select
+        className={styles.dropDown}
+        id="pickupTime"
+        name="pickupTime"
+        required
+      >
         {timeArray.map((time, key) => (
           <option key={key} value={time}>
             {time}

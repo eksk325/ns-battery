@@ -6,7 +6,12 @@
 .heading {
   font-size: 35px;
   text-align: center;
-  padding: 35px;
+  padding-top: 35px;
+  margin-bottom: 0px;
+}
+
+.instruction {
+  font-size: 18px;
 }
 
 .information {

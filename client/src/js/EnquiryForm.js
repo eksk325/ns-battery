@@ -27,29 +27,27 @@ function EnquiryForm() {
 
   // Display information to the user when they submit
   const displayInfo = function () {
-    let formData = {};
-    // If the user knows the model name
+    let formData = {
+      name: document.getElementById("customerName").value,
+      email: document.getElementById("customerEmail").value,
+      phoneNum: document.getElementById("customerPhone").value,
+      pickupDate: document.getElementById("pickupDate").value,
+      pickupTime: document.getElementById("pickupTime").value,
+    };
+
     if (knowModel === 1) {
-      formData = {
-        name: document.getElementById("customerName").value,
-        email: document.getElementById("customerEmail").value,
-        phoneNum: document.getElementById("customerPhone").value,
-        modelName: document.getElementById("modelName").value,
-      };
+      formData.modelName = document.getElementById("modelName").value;
+      formData.knowModel = true;
     } else {
-      // If the user doesn't know the model name
-      formData = {
-        name: document.getElementById("customerName").value,
-        email: document.getElementById("customerEmail").value,
-        phoneNum: document.getElementById("customerPhone").value,
-        carMake: document.getElementById("carMake").value,
-        carModel: document.getElementById("carModel").value,
-        carYear: document.getElementById("carYear").value,
-        idle: `${document.getElementById("yes").checked ? "yes" : "no"}`,
-        length: document.getElementById("length").value,
-        width: document.getElementById("width").value,
-        height: document.getElementById("height").value,
-      };
+      formData.carMake = document.getElementById("carMake").value;
+      formData.carModel = document.getElementById("carModel").value;
+      formData.carYear = document.getElementById("carYear").value;
+      formData.idle = `${
+        document.getElementById("yes").checked ? "yes" : "no"
+      }`;
+      formData.length = document.getElementById("length").value;
+      formData.width = document.getElementById("width").value;
+      formData.knowModel = false;
     }
 
     sessionStorage.setItem("formData", JSON.stringify(formData));
@@ -223,6 +221,7 @@ function EnquiryForm() {
               id="idleText"
               name="idleText"
             />
+            <TimeSlot />
           </div>
         ) : (
           <div>

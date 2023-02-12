@@ -15,7 +15,7 @@ var storage = multer.diskStorage({
 
 var upload = multer({ storage: storage }).single("userImage");
 
-async function sendEmail(userInfo) {
+async function sendEmail(userInfo, imagePath) {
   try {
     const transporter = nodemailer.createTransport({
       service: "hotmail",
@@ -27,7 +27,7 @@ async function sendEmail(userInfo) {
 
     const mailOptions = {
       from: `${process.env.MAIL_AD}`,
-      to: "raehane@gmail.com",
+      to: "danana418@gmail.com",
       subject: `${userInfo.name} 에게서 온 배터리 요청 메세지`,
       html: `<!DOCTYPE html>
         <html lang="en">
@@ -86,7 +86,18 @@ async function sendEmail(userInfo) {
             <table>
               <tr>
                 <th>디멘션</th>
-                <td>${userInfo.length}, ${userInfo.width}, ${userInfo.height}</td>
+                <td>${userInfo.length}, ${userInfo.width}</td>
+              </tr>
+            </table>
+            <br />
+            <table>
+              <tr>
+                <th>날짜</th>
+                <td>${userInfo.pickupDate}</td>
+              </tr>
+              <tr>
+                <th>시간</th>
+                <td>${userInfo.pickupTime}</td>
               </tr>
             </table>
             <br />
@@ -95,11 +106,70 @@ async function sendEmail(userInfo) {
         </html>`,
       attachments: [
         {
-          path: userInfo.path,
+          path: imagePath,
           cid: "uploadedImg",
         },
       ],
     };
+
+    if (typeof userInfo.carMake === "undefined") {
+      mailOptions.html = `<!DOCTYPE html>
+      <html lang="en">
+        <head>
+          <meta charset="UTF-8" />
+          <style> 
+            table {
+              width: 250px;
+              border: 1px solid black;
+            }
+    
+            th {
+              text-align: left;
+            }
+    
+            td {
+              text-align: right;
+            }     
+          </style>
+        </head>
+        <body>
+          <table>
+            <tr>
+              <th>이름:</th>
+              <td>${userInfo.name}</td>
+            </tr>
+            <tr>
+              <th>이메일:</th>
+              <td>${userInfo.email}</td>
+            </tr>
+            <tr>
+              <th>전화번호:</th>
+              <td>${userInfo.phoneNum}</td>
+            </tr>
+          </table>
+          <br />
+          <table>
+            <tr>
+              <th>배터리 모델명</th>
+              <td>${userInfo.modelName}</td>
+            </tr>
+          </table>
+          <br />
+          <table>
+            <tr>
+              <th>날짜</th>
+              <td>${userInfo.pickupDate}</td>
+            </tr>
+            <tr>
+              <th>시간</th>
+              <td>${userInfo.pickupTime}</td>
+            </tr>
+          </table>
+          <br />
+          <img src="cid:uploadedImg" style={"width: 350px", "height: auto"} />
+        </body>
+      </html>`;
+    }
 
     const result = await transporter.sendMail(mailOptions, (error, info) => {
       if (error) {
@@ -127,21 +197,11 @@ const postForm = (req, res) => {
       console.log("Error with uploading file");
       console.log(error.message);
     } else {
-      let userInfo = {
-        name: req.body.name,
-        email: req.body.email,
-        phoneNum: req.body.phoneNum,
-        carMake: req.body.carMake,
-        carModel: req.body.carModel,
-        carYear: req.body.carYear,
-        idle: req.body.idleText,
-        length: req.body.length,
-        width: req.body.width,
-        height: req.body.height,
-        path: `${typeof req.file == "undefined" ? notSubPath : req.file.path}`,
-      };
+      let path = `${
+        typeof req.file == "undefined" ? notSubPath : req.file.path
+      }`;
 
-      sendEmail(userInfo)
+      sendEmail(req.body, path)
         .then((result) => {
           console.log("Email is sent");
           res.redirect("/#/submitted");
