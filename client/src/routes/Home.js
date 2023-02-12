@@ -11,7 +11,7 @@ function Home() {
         </h1>
         <img src={century} alt="battery front view"></img>
       </div>
-      <h3>Battery replacement services available</h3>
+      <h3>Fill out the form below to get a quote.</h3>
       <EnquiryForm />
     </div>
   );

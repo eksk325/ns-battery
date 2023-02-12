@@ -1,0 +1,57 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  margin: auto;
+}
+
+.question {
+  display: flex;
+  font-size: 24px;
+  padding-top: 30px;
+  padding-bottom: 15px;
+  background-color: white;
+  align-items: center;
+  width: 100%;
+}
+
+.question label:hover {
+  cursor: pointer;
+}
+
+.answer {
+  /* overflow set to hidden to hide the expanded text */
+  overflow: hidden;
+  /* all style changes will ease-in-out for 1s */
+  -moz-transition: all 1s ease-in-out;
+  -ms-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  -webkit-transition: all 1ss ease-in-out;
+  transition: all 1s;
+  width: 90%;
+  font-size: 18px;
+}
+
+.openButton {
+  border: none;
+  background-color: transparent;
+  font-size: 40px;
+  color: black;
+  padding: 10px;
+}
+
+.openButton:hover {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 480px) {
+  .question {
+    font-size: 20px;
+  }
+
+  .answer {
+    font-size: 15px;
+  }
+}

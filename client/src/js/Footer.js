@@ -41,8 +41,8 @@ function Footer() {
               <h2>Quick Links</h2>
             </li>
             <li>
-              <Link to="/about-us" onClick={refresh}>
-                <label>About Us</label>
+              <Link to="/faq" onClick={refresh}>
+                <label>FAQs</label>
               </Link>
             </li>
             <li>

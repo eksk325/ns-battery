@@ -71,22 +71,22 @@ function Header() {
             </li>
             <li>
               <Link
-                to="/about-us"
-                style={{
-                  color: location.pathname === "/about-us" ? "yellow" : "white",
-                }}
-              >
-                About Us
-              </Link>
-            </li>
-            <li>
-              <Link
                 to="/quote"
                 style={{
                   color: location.pathname === "/quote" ? "yellow" : "white",
                 }}
               >
                 Request Battery
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/faq"
+                style={{
+                  color: location.pathname === "/faq" ? "yellow" : "white",
+                }}
+              >
+                FAQ
               </Link>
             </li>
             <li>
@@ -129,17 +129,6 @@ function Header() {
             </li>
             <li>
               <Link
-                to="/about-us"
-                style={{
-                  color: location.pathname === "/about-us" ? "yellow" : "white",
-                }}
-                onClick={shutMenu}
-              >
-                About Us
-              </Link>
-            </li>
-            <li>
-              <Link
                 to="/quote"
                 style={{
                   color: location.pathname === "/quote" ? "yellow" : "white",
@@ -147,6 +136,17 @@ function Header() {
                 onClick={shutMenu}
               >
                 Request Battery
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/faq"
+                style={{
+                  color: location.pathname === "/faq" ? "yellow" : "white",
+                }}
+                onClick={shutMenu}
+              >
+                FAQs
               </Link>
             </li>
             <li>
