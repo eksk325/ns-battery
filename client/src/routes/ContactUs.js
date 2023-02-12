@@ -1,5 +1,6 @@
 import styles from "../styles/Contact.module.css";
 import map from "../images/map.png";
+import { Link } from "react-router-dom";
 
 function ContactUs() {
   const date = new Date();
@@ -30,6 +31,15 @@ function ContactUs() {
         <div className={styles.open}>
           <h3>Open hours</h3>
           <br />
+          <span
+            style={{ textAlign: "center", width: "70%", paddingBottom: "30px" }}
+          >
+            Our shop might not be open at all times due to shortage of staff.
+            <br></br>
+            <br></br>
+            Please make a request through our website using the enquiry form to
+            avoid any issues.
+          </span>
           <div className={styles.hours}>
             <div className={styles.days}>
               <span style={{ fontWeight: dayIndex === 1 ? "bold" : "normal" }}>
@@ -56,7 +66,7 @@ function ContactUs() {
             </div>
             <div className={styles.time}>
               <span style={{ fontWeight: dayIndex === 1 ? "bold" : "normal" }}>
-                9:00am - 5:30pm
+                10:00am - 5:30pm
               </span>
               <span style={{ fontWeight: dayIndex === 2 ? "bold" : "normal" }}>
                 10:00am - 5:30pm
@@ -82,7 +92,7 @@ function ContactUs() {
         <div className={styles.contact}>
           <h3>Contact Details</h3>
           <br />
-          <i className="fa-solid fa-phone fa-2x"></i>
+          <i className="fa-solid fa-phone fa-2x" href="tel:+64211523789"></i>
           <span style={{ userSelect: "text" }}>021 152 3789</span>
           <i className="fa-solid fa-envelope fa-2x"></i>
           <span style={{ userSelect: "text" }}>raehane@gmail.com</span>
