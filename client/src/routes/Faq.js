@@ -1,5 +1,4 @@
 import React from "react";
-import styles from "../styles/Faq.module.css";
 import Qna from "../js/Qna";
 
 let module = require("../qnaArray");

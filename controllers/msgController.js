@@ -12,7 +12,7 @@ async function sendEmail(userInfo) {
 
     const mailOptions = {
       from: `${process.env.MAIL_AD}`,
-      to: "raehane@gmail.com",
+      to: "danana418@gmail.com",
       subject: `${userInfo.name} 에게서 온 짧은 메세지`,
       html: `<!DOCTYPE html>
       <html lang="en">
@@ -72,14 +72,7 @@ const getMsg = (req, res) => {
 };
 
 const postMsg = (req, res) => {
-  let userInfo = {
-    name: req.body.name,
-    email: req.body.email,
-    phoneNum: req.body.phoneNum,
-    message: req.body.message,
-  };
-
-  sendEmail(userInfo)
+  sendEmail(req.body)
     .then((result) => {
       console.log("Email is sent");
       res.redirect("/#/contact-us");

@@ -1,12 +1,14 @@
 import styles from "../styles/Contact.module.css";
 import map from "../images/map.png";
-import { Link } from "react-router-dom";
 
 function ContactUs() {
   const date = new Date();
   const dayIndex = date.getDay();
 
-  const submitMessage = () => {
+  const submitMessage = (e) => {
+    e.preventDefault();
+    window.location.reload();
+    window.scrollTo(0, 0);
     let formData = {
       name: document.getElementById("name").value,
       email: document.getElementById("email").value,
