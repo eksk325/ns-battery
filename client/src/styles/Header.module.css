@@ -24,12 +24,12 @@ a {
 .logo {
   display: flex;
   justify-content: center;
-  padding-top: 20px;
-  padding-bottom: 40px;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 .image {
-  height: 100px;
+  height: 150px;
 }
 
 .navMenu {
