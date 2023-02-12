@@ -64,7 +64,7 @@ function EnquiryForm() {
         id="enquiryForm"
       >
         <label className={styles.sectionHeader}>
-          Is your current car battery from Century?
+          Do you know the model name of your battery?
         </label>
         <div className={styles.idleBox}>
           <div

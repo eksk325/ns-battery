@@ -24,15 +24,15 @@ function Footer() {
       <nav className={styles.footerBar}>
         <div className={styles.footer}>
           <div className={styles.information}>
-            <div className={styles.address}>
+            <div className={styles.icons}>
               <i className="fa-solid fa-location-dot fa-2x"></i>
-              <label>
+              <i className="fa-solid fa-envelope fa-2x"></i>
+            </div>
+            <div className={styles.infos}>
+              <label style={{ paddingBottom: "20px" }}>
                 8A Parity Place <br></br>Hillcrest <br></br>Auckland
               </label>
-            </div>
-            <div className={styles.email}>
-              <i className="fa-solid fa-envelope fa-2x"></i>
-              <label>raehane@gmail.com</label>
+              <label style={{ padding: "20px" }}>raehane@gmail.com</label>
             </div>
           </div>
 
