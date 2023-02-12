@@ -29,3 +29,16 @@
   width: 25px;
   height: auto;
 }
+
+@media screen and (max-width: 460px) {
+  .box {
+    width: 300px;
+    padding: 10px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .box {
+    width: 250px;
+  }
+}

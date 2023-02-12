@@ -131,9 +131,60 @@ span {
   font-size: 18px;
   background-color: #26327a;
   color: white;
-  width: 20%;
+  width: 180px;
 }
 
 .messageButton:hover {
   cursor: pointer;
+}
+
+@media screen and (max-width: 1080px) {
+  .container {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+
+  .open {
+    width: 100%;
+  }
+
+  .contact {
+    width: 100%;
+  }
+
+  .location {
+    width: 100%;
+  }
+
+  .location img {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .location img {
+    width: 65%;
+  }
+
+  .forms {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .messagebox textarea {
+    width: 13rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .location img {
+    width: 85%;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  span {
+    font-size: 16px;
+  }
 }
