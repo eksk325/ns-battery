@@ -12,7 +12,7 @@ async function sendEmail(userInfo) {
 
     const mailOptions = {
       from: `${process.env.MAIL_AD}`,
-      to: "danana418@gmail.com",
+      to: "raehane@gmail.com",
       subject: `${userInfo.name} 에게서 온 짧은 메세지`,
       html: `<!DOCTYPE html>
       <html lang="en">
